@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to SATYAM Predictor</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+        }
+        .intro-photo {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            background-color: #333; 
+        }
+        .welcome-text {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #e94560;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="photos/tks.png" alt="Intro Photo" class="intro-photo">
+        <div class="welcome-text">WELCOME TO SATYAM PAID MODE</div>
+    </div>
+    <script>
+        setTimeout(() => {
+            window.location.href = 'games.html'; 
+        }, 10000); 
+    </script>
+</body>
+</html>

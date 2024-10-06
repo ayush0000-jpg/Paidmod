@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Selection</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #000; 
+            color: #e94560;
+            position: relative; 
+            padding-top: 250px; 
+        }
+        .top-photo {
+            position: absolute;
+            top: 50px; 
+            left: 50%;
+            transform: translateX(-50%); 
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            background-color: #333; 
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(50, 50, 50, 0.8); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            position: relative; 
+            margin-top: 100px; 
+        }
+        .bold-text {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #e94560;
+        }
+        .photos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .photo-item {
+            text-align: center;
+        }
+        .photo-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 2px solid #e94560; 
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            background-color: rgba(0, 0, 0, 0.2); 
+        }
+        .photo-item img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+        }
+        .photo-item img:active {
+            transform: scale(1);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+        .photo-name {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #e94560;
+        }
+        .telegram-button {
+            position: absolute;
+            bottom: 10px; 
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0088cc;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            /* Remove red border */
+            transition: background 0.3s;
+        }
+        .telegram-button:hover {
+            background: #007ab8;
+        }
+        .telegram-button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+        .popup {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: #e94560;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <img src="photos/tks.png" alt="Top Photo" class="top-photo">
+    <div class="container">
+        <div class="bold-text">CHOOSE YOUR GAME.</div>
+        <div class="photos">
+            <div class="photo-item">
+                <img src="photos/download (9).png" alt="Photo 1" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">51 GAME</div>
+            </div>
+            <div class="photo-item">
+                <img src="photos/download (14).png" alt="Photo 2" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">IN999</div>
+            </div>
+             <div class="photos">
+
+            <div class="photo-item">
+
+                <img src="photos/download (12).png" alt="Photo 1" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">BS WINN</div>
+            </div>
+             <div class="photos">
+
+            <div class="photo-item">
+
+                <img src="photos/download (1).png" alt="Photo 1" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">TC LOTTERY</div>
+            </div>
+             <div class="photos">
+
+            <div class="photo-item">
+
+                <img src="photos/download (2).png" alt="Photo 1" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">BIG MUMBAI</div>
+            </div>
+             <div class="photos">
+               
+            <div class="photo-item">
+              
+                <img src="photos/download (3).png" alt="Photo 1" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">TIRANGA GAME</div>
+            </div>
+             <div class="photos">
+               
+            <div class="photo-item">
+                <img src="photos/download (6).png" alt="Photo 1" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">82 LOTTERY</div>
+            </div>
+             <div class="photos">
+               
+            <div class="photo-item">
+                <img src="photos/download (7).png" alt="Photo 1" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">91 CLUB</div>
+            </div>
+             <div class="photos">
+               
+            <div class="photo-item">
+                <img src="photos/download (15).png" alt="Photo 1" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">55 CLUB</div>
+            </div>
+             <div class="photos">
+               
+            <div class="photo-item">
+                <img src="photos/download (8).png" alt="Photo 1" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">BHARAT CLUB</div>
+            </div>
+             <div class="photos">
+               
+            <div class="photo-item">
+                <img src="photos/download (4).png" alt="Photo 1" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">GOA GAME</div>
+            </div>
+             <div class="photos">
+               
+            <div class="photo-item">
+                <img src="photos/download (11).png" alt="Photo 1" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">LUCKNOW GAME</div>
+            </div>
+             <div class="photos">
+               
+            <div class="photo-item">
+                <img src="photos/download (10).png" alt="Photo 1" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">OK WINN</div>
+            </div>
+             <div class="photos">
+               
+            <div class="photo-item">
+                <img src="photos/download (13).png" alt="Photo 1" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">DREAM 99</div>
+            </div>
+             <div class="photos">
+               
+            <div class="photo-item">
+                <img src="photos/download (5).png" alt="Photo 1" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">BDG GAME</div>
+            </div>
+             <div class="photos">
+               
+            <div class="photo-item">
+                <img src="photos/download (16).png" alt="Photo 1" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">SIKKIM GAME</div>
+            </div>
+            <div class="photos">
+               
+            <div class="photo-item">
+                <img src="photos/download (20).png" alt="Photo 1" onclick="window.location.href='gametype.html'">
+                <div class="photo-name">TP PLAY</div>
+            </div>
+        </div>
+    </div>
+   
+    <div id="popup" class="popup">WELCOME TO SATYAM PAID MOD</div>
+    <script>
+        
+        function showPopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'block';
+            setTimeout(function() {
+                popup.style.display = 'none';
+            }, 2000); 
+        }
+
+        
+        window.onload = showPopup;
+    </script>
+</body>
+</html>
